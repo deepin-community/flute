@@ -1,0 +1,96 @@
+flute (1:1.1.6-4) unstable; urgency=medium
+
+  * Team upload.
+  * Moved the package to Git
+  * Standards-Version updated to 4.1.3
+  * Switch to debhelper level 10
+  * Added the Homepage field
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Fri, 12 Jan 2018 10:38:02 +0100
+
+flute (1:1.1.6-3) unstable; urgency=low
+
+  * Update vcs location. (Closes: #649323).
+  * Fix watch file.
+  * Fix package name in suggests.
+  * Define lib.dir correctly (Closes: #648740).
+
+ -- Andrew Ross <ubuntu@rossfamily.co.uk>  Mon, 21 Nov 2011 23:15:34 +0000
+
+flute (1:1.1.6-2) unstable; urgency=low
+
+  * merge libbase 1.1.6-2 changes
+
+ -- Rene Engelhard <rene@debian.org>  Tue, 01 Nov 2011 14:48:16 +0000
+
+flute (1:1.1.6-1) unstable; urgency=low
+
+  * new upstream release
+  * add me to Uploaders
+  * remove -1.3-jfree-* again and build just libflute-java-*
+
+ -- Rene Engelhard <rene@debian.org>  Sun, 25 Sep 2011 21:29:27 +0000
+
+flute-1.3-jfree (20061107-8) unstable; urgency=low
+
+  * Adopt package by Debian Java Maintainers
+    <pkg-java-maintainers@lists.alioth.debian.org> (Closes: #636836).
+  * Switch to source format 3 (quilt)
+  * Use javahelper.
+  * Bump standards version to 3.9.2 (no changes required).
+  * Fix lintian warnings.
+
+ -- Andrew Ross <ubuntu@rossfamily.co.uk>  Wed, 24 Aug 2011 20:54:36 +0100
+
+flute-1.3-jfree (20061107-7) unstable; urgency=low
+
+  * Team upload.
+  * Orphaning package.
+
+ -- Torsten Werner <twerner@debian.org>  Sat, 06 Aug 2011 10:07:41 +0200
+
+flute-1.3-jfree (20061107-6) unstable; urgency=low
+
+  * (Build-)Depends on default-jdk.
+  * Build Java5 compatible class files.
+  * Build-Depends on debhelper >= 7.
+  * Build-Depend on javacc >= 5.0.
+  * Converted debian/copyright to UTF-8 and improved
+    license reference.
+  * Moved to section 'java'.
+  * Replaced dh_clean -b by dh_prep.
+  * Delete build/ directory in clean target.
+  * Updated Standards-Version to 3.8.3.
+
+ -- Michael Koch <konqueror@gmx.de>  Thu, 24 Sep 2009 20:28:07 +0200
+
+flute-1.3-jfree (20061107-5) unstable; urgency=low
+
+  * export JAVA_HOME=/usr/lib/jvm/java-gcj (closes: #543080)
+
+ -- Rene Engelhard <rene@debian.org>  Tue, 25 Aug 2009 15:47:28 +0200
+
+flute-1.3-jfree (20061107-4) unstable; urgency=low
+
+  * build-depend on ant-optional (closes: #453190)
+
+ -- Rene Engelhard <rene@debian.org>  Wed, 28 Nov 2007 10:27:00 +0100
+
+flute-1.3-jfree (20061107-3) unstable; urgency=low
+
+  * build-depend on ant (closes: #451418)
+
+ -- Rene Engelhard <rene@debian.org>  Fri, 16 Nov 2007 19:42:08 +0100
+
+flute-1.3-jfree (20061107-2) unstable; urgency=low
+
+  * fix parser rebuilding - thanks Paul Cager. Rebuild it.
+  * upload to unstable
+
+ -- Rene Engelhard <rene@debian.org>  Mon, 05 Nov 2007 00:29:44 +0100
+
+flute-1.3-jfree (20061107-1) experimental; urgency=low
+
+  * Initial release
+
+ -- Rene Engelhard <rene@debian.org>  Sun, 14 Oct 2007 23:51:01 +0200

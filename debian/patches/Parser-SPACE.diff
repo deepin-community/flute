@@ -1,0 +1,12 @@
+Use StringBuilder instead of StringBuffer to create SPACE string.
+--- flute-1.1.6.orig/source/org/w3c/flute/parser/Parser.jj
++++ flute-1.1.6/source/org/w3c/flute/parser/Parser.jj
+@@ -52,7 +52,7 @@ import org.w3c.flute.util.Encoding;
+ public class Parser implements org.w3c.css.sac.Parser {
+ 
+     // replaces all \t, \n, etc with this StringBuffer.
+-    static final StringBuffer SPACE = new StringBuffer(" ");
++    static final StringBuilder SPACE = new StringBuilder(" ");
+ 
+     // the document handler for the parser
+     protected DocumentHandler documentHandler;

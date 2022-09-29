@@ -1,0 +1,29 @@
+#!/usr/bin/make -f
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+export JAVA_HOME=/usr/lib/jvm/default-java
+
+%:
+	dh $@ --with javahelper
+
+override_dh_auto_build:
+	cd source/org/w3c/flute/parser && javacc Parser.jj
+	ant -Dantcontrib.build.cache.dir=/usr/share/java -Dlib.dir=/usr/share/java compile jar javadoc
+
+override_dh_auto_clean:
+	for i in TokenMgrError.java Token.java CharStream.java \
+		Parser.java ParserConstants.java ParserTokenManager.java \
+		Token.java TokenMgrError.java; do \
+		rm -f source/org/w3c/flute/parser/$$i; \
+	done
+	rm -f dist/flute-1.1-SNAPSHOT.jar dist/MANIFEST.MF
+	rm -rf bin
+
+override_jh_installlibs:
+	jh_installlibs --no-mangle --upstream-version=1.1-SNAPSHOT
+
+get-orig-source:
+	uscan --verbose --rename --force-download
+
